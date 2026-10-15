@@ -24,6 +24,14 @@
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
     </div>
+    <!-- 背景里摇摆的花：位置/大小/节奏各不相同 -->
+    <div class="bg-flowers" aria-hidden="true">
+      <svg class="bf" style="--x:5%;--y:56%;--s:.85;--t:7s;--dl:0s" viewBox="0 0 100 120"><path d="M50 118 C50 100 50 88 50 74" stroke="#7BAE6A" stroke-width="5" stroke-linecap="round"/><g fill="#F9A8C9" opacity=".88"><ellipse cx="50" cy="34" rx="13" ry="22"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(72 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(144 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(216 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(288 50 56)"/></g><circle cx="50" cy="56" r="12" fill="#F5B942"/></svg>
+      <svg class="bf" style="--x:86%;--y:62%;--s:1.1;--t:8.5s;--dl:-3s" viewBox="0 0 100 120"><path d="M50 118 C50 100 50 88 50 74" stroke="#7BAE6A" stroke-width="5" stroke-linecap="round"/><g fill="#FFF6E8" opacity=".9"><ellipse cx="50" cy="34" rx="13" ry="22"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(72 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(144 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(216 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(288 50 56)"/></g><circle cx="50" cy="56" r="12" fill="#F5B942"/></svg>
+      <svg class="bf" style="--x:10%;--y:80%;--s:1.25;--t:9.5s;--dl:-5s" viewBox="0 0 100 120"><path d="M50 118 C50 100 50 88 50 74" stroke="#7BAE6A" stroke-width="5" stroke-linecap="round"/><g fill="#FBD9A0" opacity=".9"><ellipse cx="50" cy="34" rx="13" ry="22"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(72 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(144 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(216 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(288 50 56)"/></g><circle cx="50" cy="56" r="12" fill="#E89B2D"/></svg>
+      <svg class="bf" style="--x:78%;--y:26%;--s:.7;--t:6.5s;--dl:-2s" viewBox="0 0 100 120"><path d="M50 118 C50 100 50 88 50 74" stroke="#7BAE6A" stroke-width="5" stroke-linecap="round"/><g fill="#F9A8C9" opacity=".85"><ellipse cx="50" cy="34" rx="13" ry="22"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(72 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(144 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(216 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(288 50 56)"/></g><circle cx="50" cy="56" r="12" fill="#F5B942"/></svg>
+      <svg class="bf" style="--x:64%;--y:84%;--s:.95;--t:8s;--dl:-6.5s" viewBox="0 0 100 120"><path d="M50 118 C50 100 50 88 50 74" stroke="#7BAE6A" stroke-width="5" stroke-linecap="round"/><g fill="#FFF6E8" opacity=".88"><ellipse cx="50" cy="34" rx="13" ry="22"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(72 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(144 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(216 50 56)"/><ellipse cx="50" cy="34" rx="13" ry="22" transform="rotate(288 50 56)"/></g><circle cx="50" cy="56" r="12" fill="#F5B942"/></svg>
+    </div>
   </div>
 
   <main class="app">
@@ -80,7 +88,7 @@
 
     <!-- 今日记录 -->
     <section class="card">
-      <h2>今日记录</h2>
+      <div class="sec-head"><h2>今日记录</h2><button id="clear-today" type="button" class="link-btn">清空今日</button></div>
       <ul id="log-list"></ul>
       <p id="empty-tip" class="empty-tip">还没喝第一口，快来浇花 🌱</p>
     </section>

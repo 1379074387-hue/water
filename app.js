@@ -114,6 +114,17 @@ logListEl.addEventListener("click", (e) => {
   render();
 });
 
+/* ---------- 一键清空今日记录（先问一句，防手滑） ---------- */
+document.getElementById("clear-today").addEventListener("click", () => {
+  const key = todayKey();
+  if (!(store.days[key] || []).length) return;  // 本来就没记录，不用问
+  if (confirm("确定要清空今天的喝水记录吗？小花会变回花苞哦 🌱")) {
+    store.days[key] = [];
+    save();
+    render();
+  }
+});
+
 /* ---------- 改每日目标 ---------- */
 document.getElementById("goal-save").addEventListener("click", () => {
   let v = parseInt(goalInput.value, 10);

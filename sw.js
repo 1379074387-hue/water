@@ -1,5 +1,5 @@
 /* Service Worker：让 App 离线也能打开 */
-const CACHE = "flower-water-v1";
+const CACHE = "flower-water-v2";
 const ASSETS = [
   "./",
   "./index.html",
@@ -7,7 +7,8 @@ const ASSETS = [
   "./app.js",
   "./manifest.json",
   "./icons/icon.svg",
-  "./bgm.mp3"
+  "./bgm.mp3",
+  "./bg.jpg"
 ];
 
 self.addEventListener("install", (e) => {
