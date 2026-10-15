@@ -36,10 +36,33 @@ function dayTotal(key) {
 }
 
 /* ---------- 记录一杯水（快捷按钮和滑块都走这里） ---------- */
+const SCALE = [523.25, 587.33, 659.25, 783.99, 880.00, 1046.50, 1174.66, 1318.51]; // 五声音阶上行
+let actx = null;
+/* 水滴钢琴：用代码直接合成钢琴味，不用传音频文件；第几杯就弹第几个音，越喝越高 */
+function piano(freq) {
+  try {
+    if (!actx) actx = new (window.AudioContext || window.webkitAudioContext)();
+    if (actx.state === "suspended") actx.resume();
+    const t0 = actx.currentTime;
+    const g = actx.createGain();
+    g.gain.setValueAtTime(0.0001, t0);
+    g.gain.exponentialRampToValueAtTime(0.5, t0 + 0.015);  // 像琴键敲下去，起音快
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + 1.4); // 尾音慢慢消失
+    g.connect(actx.destination);
+    [[1, "triangle", 0.6], [2, "sine", 0.25], [1.005, "sine", 0.2]].forEach(function (cfg) {
+      const o = actx.createOscillator();
+      o.type = cfg[1]; o.frequency.value = freq * cfg[0];
+      const og = actx.createGain(); og.gain.value = cfg[2];
+      o.connect(og); og.connect(g);
+      o.start(t0); o.stop(t0 + 1.5);
+    });
+  } catch (e) {}
+}
 function addWater(ml) {
   const key = todayKey();
   if (!store.days[key]) store.days[key] = [];
   store.days[key].push({ ts: Date.now(), ml });  // ts 是时间戳，删除时用来认出它
+  piano(SCALE[(store.days[key].length - 1) % SCALE.length]); // 第 n 杯弹第 n 个音
   save();
   render();   // 界面立刻重画：数字、花、进度条一起动
 }
