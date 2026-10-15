@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#F6C445"/>
+  <!-- 水滴 -->
+  <path d="M256 92 C256 92 150 236 150 322 C150 392 198 438 256 438 C314 438 362 392 362 322 C362 236 256 92 256 92 Z" fill="#5AA9E6"/>
+  <path d="M214 300 C206 322 206 348 218 368 C196 356 186 332 190 308 C193 288 204 272 214 258 C210 272 210 286 214 300 Z" fill="#FFFFFF" opacity="0.45"/>
+  <!-- 水滴上的小花 -->
+  <g transform="translate(256 330)">
+    <ellipse cx="0" cy="-26" rx="13" ry="22" fill="#F9A8C9"/>
+    <ellipse cx="24" cy="-8" rx="13" ry="22" fill="#F9A8C9" transform="rotate(72 24 -8)"/>
+    <ellipse cx="15" cy="21" rx="13" ry="22" fill="#F9A8C9" transform="rotate(144 15 21)"/>
+    <ellipse cx="-15" cy="21" rx="13" ry="22" fill="#F9A8C9" transform="rotate(216 -15 21)"/>
+    <ellipse cx="-24" cy="-8" rx="13" ry="22" fill="#F9A8C9" transform="rotate(288 -24 -8)"/>
+    <circle cx="0" cy="0" r="14" fill="#F5B942"/>
+  </g>
+  <!-- 底部小草 -->
+  <path d="M120 470 C140 440 170 432 196 440 C170 446 150 458 142 472 Z" fill="#6FB35E"/>
+  <path d="M392 470 C372 440 342 432 316 440 C342 446 362 458 370 472 Z" fill="#6FB35E"/>
+</svg>
