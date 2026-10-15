@@ -28,10 +28,11 @@ body {
 .sec-head { display: flex; align-items: center; justify-content: space-between; }
 .sec-head h2 { margin: 0; }
 .link-btn {
-  background: none; border: none; padding: 6px 2px;
-  color: #b08d4f; font-size: 14px;
+  background: rgba(176, 141, 79, 0.14); border: none; border-radius: 999px;
+  padding: 8px 16px;
+  color: #a07f45; font-size: 16px; font-weight: 600;
 }
-.link-btn:active { opacity: .55; }
+.link-btn:active { opacity: .55; transform: scale(.96); }
 .bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
 
 .bg-photo {
