@@ -36,7 +36,7 @@ body {
 
 .bg-photo {
   position: absolute; inset: -4%;
-  background: url("bg.jpg") center / cover no-repeat,
+  background: url("image.png") center / cover no-repeat,
               linear-gradient(180deg, #fdeec2, #e8f3d8);
   animation: breathe 14s ease-in-out infinite alternate;
 }
